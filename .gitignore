@@ -46,3 +46,7 @@ Thumbs.db
 out
 
 .angular
+
+.env.local
+.env.development.local
+.env

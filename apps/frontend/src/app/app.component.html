@@ -1,2 +1,74 @@
-<app-nx-welcome></app-nx-welcome>
+<!-- Frontend Log in UI -->
+<div *ngIf="isRootRoute">
+  <div
+    class="flex bg-gray-50 dark:bg-zinc-800 items-center justify-center min-h-screen"
+  >
+    <div
+      class="flex flex-col lg:flex-row items-center justify-evenly max-w-sm md:max-w-none lg:w-[70%] p-8 md:px-10 bg-white dark:bg-zinc-900 rounded-lg shadow-lg"
+    >
+      <!-- Logo Image -->
+      <div class="-mt-14 md:-mt-0">
+        <img
+          [src]="logoPath"
+          alt="OKC Logo"
+          width="300"
+          height="300"
+          class="object-contain h-64 md:h-80"
+        />
+      </div>
+
+      <!-- Login Form -->
+      <form>
+        <h2
+          class="text-xl text-center md:text-left font-bold text-gray-800 dark:text-gray-100 mb-6 -mt-8 md:-mt-0"
+        >
+          Log In
+        </h2>
+
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          class="peer p-1 px-4 mb-2 border shadow-md border-gray-50 dark:border-zinc-700 dark:bg-zinc-900 block bg-white text-slate-700 dark:text-gray-300 placeholder:text-xs placeholder:text-center placeholder:md:text-left text-center md:text-left focus:outline-none"
+        />
+        <p
+          class="invisible peer-invalid:visible text-red-500 text-xs text-center md:text-left"
+        >
+          Please provide a valid email address.
+        </p>
+
+        <div class="relative mb-4">
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            class="p-1 px-4 border shadow-md border-gray-50 dark:border-zinc-700 dark:bg-zinc-900 block bg-white text-slate-700 dark:text-gray-300 placeholder:text-xs placeholder:text-center placeholder:md:text-left text-center md:text-left focus:outline-none"
+          />
+          <a routerLink="/home">
+            <img
+              [src]="arrowPath"
+              alt="Arrow"
+              class="h-8 w-8 absolute -right-8 top-1/2 transform -translate-y-1/2 cursor-pointer hover:scale-125 transition-transform duration-300"
+            />
+          </a>
+        </div>
+
+        <a routerLink="#">
+          <div class="group flex items-center space-x-3 mt-8">
+            <div
+              class="w-3 h-3 bg-orange-400 rounded-full group-hover:animate-ping"
+            ></div>
+            <div
+              class="text-xs dark:text-gray-300 text-gray-500 group-hover:dark:text-gray-400 group-hover:text-gray-700 transition duration-300"
+            >
+              Forgot password?
+            </div>
+          </div>
+        </a>
+      </form>
+    </div>
+  </div>
+</div>
+
 <router-outlet></router-outlet>

@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/backend/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/backend"
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "backend:build",
+        "dev": true,
+        "port": 3000
+      }
+    },
+    "dev": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "backend:build",
+        "dev": true,
+        "port": 3000
+      }
+    }
+  }
+}
