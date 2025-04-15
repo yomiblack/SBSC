@@ -9,6 +9,7 @@ This is a fullstack AI-powered chat widget built using **Angular**, **Next.js**,
 - 🔁 Live two-way conversation with contextual history
 - 🗂 Fullstack NX monorepo: shared code in `libs/`
 - 🌐 Deployed on Vercel (single-unit build)
+- 🌓 Dark/Light Mode: Automatically adapts to user's system preference
 
 ## 🛠 Tech Stack
 
