@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgClass, NgStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -40,7 +41,7 @@ export class HomeComponent {
 
     // Send user message to the server
     try {
-      const response = await fetch('https://nx-backend.vercel.app/api/chat', {
+      const response = await fetch(`${environment.apiUrl}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
